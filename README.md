@@ -26,3 +26,15 @@ C:\Bitnami\wampstack-7.1.29-0\apache2\htdocs
     phpinfo();
 ?>
 ```
+
+3. 테이블만들기
+auth 테이블 생성(id와 name(이름), email(이메일), pw(패스워드))
+```
+create table auth(
+     id bigint(20) unsigned not null auto_increment,
+     name varchar(255) not null,
+     email varchar(255) not null,
+     pw varchar(255) not null,
+     primary key (id)
+)  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+```
