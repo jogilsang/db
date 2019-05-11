@@ -12,3 +12,7 @@ RDBMS의 경우
 
 
 No-SQL의 경우
+
+### WAMP (Window, apache, mysql, php)  
+설치과정 참고 :  
+https://blog.naver.com/action21c_new/221530228343  
