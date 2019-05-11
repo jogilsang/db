@@ -17,8 +17,8 @@ No-SQL의 경우
 설치과정 참고 :  
 https://blog.naver.com/action21c_new/221530228343  
 
-1. php파일 추가할떄 경로(EX : index.php, test.php, get.php), 접속방법은 localhost:test.php
-C:\Bitnami\wampstack-7.1.29-0\apache2\htdocs
+1. php파일 추가할떄 경로(EX : index.php, test.php, get.php), 접속방법은 localhost:test.php  
+C:\Bitnami\wampstack-7.1.29-0\apache2\htdocs  
 
 2. test.php
 ```
