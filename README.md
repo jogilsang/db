@@ -1,5 +1,10 @@
 # manual-db
 
+### 테스트 안내사항
+1. 모든 생성 db 이름은 db다  
+2. 모든 생성 table 이름은 auth다  
+3. 모든 생성 column은 id, name, email, pw 다.  
+
 ### 알아야할것
 RDBMS의 경우
 
@@ -29,6 +34,10 @@ C:\Bitnami\wampstack-7.1.29-0\apache2\htdocs
 
 ### MySQL
 
+0. DB 만들기
+```
+create database db DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+```
 1. 테이블만들기 (CREATE)
 auth 테이블 생성(id와 name(이름), email(이메일), pw(패스워드))
 ```
@@ -40,7 +49,18 @@ create table auth(
      primary key (id)
 )  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 ```
-2. 데이터넣기 (INSERT)
+2. 테이블 비우기(TRUNCATE)
+```
+TRUNCATE auth;
+```
+3. 데이터 다 가져오기(QUERY)
+```
+select * from person;
+```
+
+4. 데이터넣기 (INSERT)
 ```
 insert into auth(name, email, pw) values('jo', 'jogilsang@naver.com', '1234');
 ```
+
+
