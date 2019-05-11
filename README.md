@@ -27,7 +27,9 @@ C:\Bitnami\wampstack-7.1.29-0\apache2\htdocs
 ?>
 ```
 
-3. 테이블만들기
+### MySQL
+
+1. 테이블만들기 (CREATE)
 auth 테이블 생성(id와 name(이름), email(이메일), pw(패스워드))
 ```
 create table auth(
@@ -37,4 +39,8 @@ create table auth(
      pw varchar(255) not null,
      primary key (id)
 )  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+```
+2. 데이터넣기 (INSERT)
+```
+insert into auth(name, email, pw) values('jo', 'jogilsang@naver.com', '1234');
 ```
