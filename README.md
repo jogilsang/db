@@ -32,7 +32,7 @@ C:\Bitnami\wampstack-7.1.29-0\apache2\htdocs
 ?>
 ```
 
-### MySQL
+### MySQL 설치 및 default 메뉴얼
 
 0. DB 만들기
 ```
@@ -62,5 +62,10 @@ select * from person;
 ```
 insert into auth(name, email, pw) values('jo', 'jogilsang@naver.com', '1234');
 ```
+
+### MySQL 개념
+속성은 기본속성, 설계속성, 파생속성으로 나뉜다
+도메인(Domain) : 속성이 가질수있는 값의 범위 (예 : 성별 -> 남,여 , 색깔 -> 빨,주,노,초,파,남,보)
+
 
 
