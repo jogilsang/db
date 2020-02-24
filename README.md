@@ -67,5 +67,12 @@ insert into auth(name, email, pw) values('jo', 'jogilsang@naver.com', '1234');
 속성은 기본속성, 설계속성, 파생속성으로 나뉜다
 도메인(Domain) : 속성이 가질수있는 값의 범위 (예 : 성별 -> 남,여 , 색깔 -> 빨,주,노,초,파,남,보)
 
-
-
+### SELECT
+```ms-sql
+SELECT [job_id]   AS '아이디'
+      ,[job_desc] AS '내림차순'
+      ,[min_lvl]  AS '최소값'
+      ,[max_lvl]  AS '최대값'
+  FROM [pubs].[dbo].[jobs] a
+  WHERE a.max_lvl = 100
+```
