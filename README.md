@@ -1,5 +1,10 @@
 # manual-db
 
+### MS-SQL DOC
+```
+https://docs.microsoft.com/ko-kr/sql/t-sql/functions/year-transact-sql?view=sql-server-ver15
+```
+
 ### MS-SQL 단축키
 ``'
 alt + t(도구) +o(옵션) : 옵션 
