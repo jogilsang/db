@@ -46,18 +46,30 @@ select ROUND(26.5, 0) AS ROUND
 select ROUND(26.5, 1) AS ROUND
 select ROUND(26.555, 1) AS ROUND
 
+--rownum
+select a.job_id, job_desc,
+	ROW_NUMBER() over(order by a.job_desc DESC) AS Row_ID 
+	from pubs.dbo.jobs a
 
+--with
+WITH T AS (
+	SELECT top 2 au_id FROM pubs.dbo.authors
+)
+SELECT * FROM pubs.dbo.jobs a, T
 
+--GRANT
+GRANT SELECT, INSERT, UPDATE, DELETE ON pubs.dbo.authors TO jogilsang
 
+--UPDATE
+BEGIN tran test1
+UPDATE pubs.dbo.authors
+	SET city = 'test1'
+SAVE tran step1
 
+BEGIN tran test2
+UPDATE pubs.dbo.authors
+	SET city = 'test2'
+SAVE tran step2
 
-
-
-
-
-
-
-
-
-
-
+rollback tran step1
+rollback tran
