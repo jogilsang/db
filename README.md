@@ -11,6 +11,13 @@ ide :
 https://www.toadworld.com/products/downloads?type=Trial&download=toad-edge
 ```
 
+### MariaDB Command
+```
+create database my_db;
+show databases;
+use my_db;
+```
+
 ### MS-SQL DOC
 ```
 https://docs.microsoft.com/ko-kr/sql/t-sql/functions/year-transact-sql?view=sql-server-ver15
