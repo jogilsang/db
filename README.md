@@ -1,5 +1,10 @@
 # manual-db
 
+### MariaDB
+```
+https://javaplant.tistory.com/31
+```
+
 ### MS-SQL DOC
 ```
 https://docs.microsoft.com/ko-kr/sql/t-sql/functions/year-transact-sql?view=sql-server-ver15
