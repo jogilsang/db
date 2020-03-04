@@ -3,6 +3,12 @@
 ### MariaDB
 ```
 https://javaplant.tistory.com/31
+
+download : 
+https://downloads.mariadb.org/mariadb/10.2.14/
+
+ide :
+https://www.toadworld.com/products/downloads?type=Trial&download=toad-edge
 ```
 
 ### MS-SQL DOC
