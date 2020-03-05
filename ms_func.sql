@@ -66,6 +66,7 @@ INTERSECT
 select b.Country, b.City FROM [Northwind].[dbo].[Customers] b
 
 -- Outer JOIN
+-- WHERE b.Country = NULL은 교집합을 제외시킨다.	   
 select a.SupplierID, a.Country, b.CustomerID  
 from [Northwind].[dbo].[Suppliers] a LEFT OUTER JOIN [Northwind].[dbo].[Customers] b 
 ON a.Country = b.Country ORDER BY a.Country
