@@ -48,28 +48,32 @@ select ROUND(26.555, 1) AS ROUND
 
 --rownum
 select a.job_id, job_desc,
-	ROW_NUMBER() over(order by a.job_desc DESC) AS Row_ID 
+	ROW_NUMBER() over(order by a.job_id) AS ROW_NUM 
 	from pubs.dbo.jobs a
 
---with
-WITH T AS (
-	SELECT top 2 au_id FROM pubs.dbo.authors
-)
-SELECT * FROM pubs.dbo.jobs a, T
+-- EQUI JOIN (등가 조인) n x n개
+select a.SupplierID, a.Country, b.CustomerID from [Northwind].[dbo].[Suppliers] a, [Northwind].[dbo].[Customers] b
+where a.Country = b.Country ORDER BY a.Country
 
---GRANT
-GRANT SELECT, INSERT, UPDATE, DELETE ON pubs.dbo.authors TO jogilsang
+-- INNER JOIN ( = 등가 조인) 
+select a.SupplierID, a.Country, b.CustomerID 
+from [Northwind].[dbo].[Suppliers] a INNER JOIN [Northwind].[dbo].[Customers] b
+ON a.Country = b.Country ORDER BY a.Country
 
---UPDATE
-BEGIN tran test1
-UPDATE pubs.dbo.authors
-	SET city = 'test1'
-SAVE tran step1
+-- INTERSECT 연산 ( 교집합 )
+select a.City, a.Country FROM [Northwind].[dbo].[Suppliers] a
+INTERSECT
+select b.Country, b.City FROM [Northwind].[dbo].[Customers] b
 
-BEGIN tran test2
-UPDATE pubs.dbo.authors
-	SET city = 'test2'
-SAVE tran step2
+-- Outer JOIN
+select a.SupplierID, a.Country, b.CustomerID  
+from [Northwind].[dbo].[Suppliers] a LEFT OUTER JOIN [Northwind].[dbo].[Customers] b 
+ON a.Country = b.Country ORDER BY a.Country
 
-rollback tran step1
-rollback tran
+select a.SupplierID, a.Country, b.CustomerID  
+from [Northwind].[dbo].[Suppliers] a RIGHT OUTER JOIN [Northwind].[dbo].[Customers] b 
+ON a.Country = b.Country ORDER BY a.Country
+
+-- CROSS JOIN
+SELECT a.SupplierID, b.CustomerID 
+FROM [Northwind].[dbo].[Suppliers] a CROSS JOIN [Northwind].[dbo].[Customers] b
