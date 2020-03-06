@@ -33,6 +33,34 @@ INSERT INTO rooms VALUES ( id, 'test1', 'test', true );
 
 ```
 
+2. CLI 한글입력 
+```
+show variables like 'c%';
+cp /etc/mysql/my.cnf /etc/mysql/my.cnf.ori
+vi /etc/mysql/my.cnf
+
+[client]
+default-character-set=utf8
+
+[mysqld]
+port = 3306
+init_connect="SET collation_connection=utf8_general_ci"
+init_connect="SET NAMES utf8"
+character-set-server=utf8
+collation-server=utf8_general_ci
+skip-character-set-client-handshake
+
+[mysqldump]
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+
+service mysql restart
+
+show variables like 'c%';
+```
+
 ### MS-SQL
 1. DOC
 ```
