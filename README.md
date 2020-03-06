@@ -17,6 +17,11 @@ https://www.toadworld.com/products/downloads?type=Trial&download=toad-edge
 create database my_db;
 show databases;
 use my_db;
+
+set password for 'root'@'localhost' = password('변경할 비밀번호');
+FLUSH PRIVILEGES;
+
+
 ```
 
 ### MS-SQL
