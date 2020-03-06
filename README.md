@@ -21,6 +21,15 @@ use my_db;
 set password for 'root'@'localhost' = password('변경할 비밀번호');
 FLUSH PRIVILEGES;
 
+create table rooms (
+id int  AUTO_INCREMENT,
+name varchar(50),
+department varchar(50),
+isUsed boolean,
+primary key (id)
+);
+
+INSERT INTO rooms VALUES ( id, 'test1', 'test', true );
 
 ```
 
