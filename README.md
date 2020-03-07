@@ -31,6 +31,9 @@ primary key (id)
 
 INSERT INTO rooms VALUES ( id, 'test1', 'test', true );
 
+UPDATE pubs.dbo.authors
+	SET city = 'contry'
+
 ```
 
 2. CLI 한글입력 
