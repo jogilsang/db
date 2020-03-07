@@ -62,6 +62,7 @@ show variables like 'c%';
 ```
 
 ```
+window
 +--------------------------+-----------------------------------------------+
 | Variable_name            | Value                                         |
 +--------------------------+-----------------------------------------------+
@@ -81,6 +82,32 @@ show variables like 'c%';
 | concurrent_insert        | AUTO                                          |
 | connect_timeout          | 10                                            |
 +--------------------------+-----------------------------------------------+
+
+ubuntu 18.04
++----------------------------------+----------------------------+
+| Variable_name                    | Value                      |
++----------------------------------+----------------------------+
+| character_set_client             | latin1                     |
+| character_set_connection         | latin1                     |
+| character_set_database           | latin1                     |
+| character_set_filesystem         | binary                     |
+| character_set_results            | latin1                     |
+| character_set_server             | latin1                     |
+| character_set_system             | utf8                       |
+| character_sets_dir               | /usr/share/mysql/charsets/ |
+| check_constraint_checks          | ON                         |
+| collation_connection             | latin1_swedish_ci          |
+| collation_database               | latin1_swedish_ci          |
+| collation_server                 | latin1_swedish_ci          |
+| column_compression_threshold     | 100                        |
+| column_compression_zlib_level    | 6                          |
+| column_compression_zlib_strategy | DEFAULT_STRATEGY           |
+| column_compression_zlib_wrap     | OFF                        |
+| completion_type                  | NO_CHAIN                   |
+| concurrent_insert                | ALWAYS                     |
+| connect_timeout                  | 5                          |
+| core_file                        | OFF                        |
++----------------------------------+----------------------------+
 ```
 
 ### MS-SQL
