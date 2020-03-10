@@ -34,6 +34,9 @@ INSERT INTO rooms VALUES ( id, 'test1', 'test', true );
 UPDATE pubs.dbo.authors
 	SET city = 'contry'
 
+-- 칼럼추가
+ALTER TABLE reservations ADD roomId varchar(50) NOT NULL
+
 ```
 
 2. CLI 한글입력 
