@@ -40,6 +40,9 @@ UPDATE pubs.dbo.authors
 -- 칼럼추가
 ALTER TABLE reservations ADD roomId varchar(50) NOT NULL
 
+-- delete
+DELETE FROM [table] WHERE id=5;
+Truncate [table]
 ```
 
 2. CLI 한글입력 
