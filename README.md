@@ -1,5 +1,8 @@
 # manual-db
 
+### 샘플 db sample db
+https://archive.codeplex.com/?p=msftdbprodsamples
+
 ### MariaDB
 0. 환경구축
 ```
