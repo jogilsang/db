@@ -3,6 +3,16 @@
 ### 샘플 db sample db
 https://archive.codeplex.com/?p=msftdbprodsamples
 
+### 저장 프로시저 SP
+```
+CREATE : 생성
+ALTER : 수정
+DROP : 삭제
+
+
+
+```
+
 ### MariaDB
 0. 환경구축
 ```
