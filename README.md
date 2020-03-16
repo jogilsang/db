@@ -36,6 +36,7 @@ INSERT INTO rooms VALUES ( id, 'test1', 'test', true );
 
 UPDATE pubs.dbo.authors
 	SET city = 'contry'
+UPDATE reservations SET  title = '연예가중계', userName = '현빈', startTime = '10:00',endTime = '11:00' WHERE id = 10
 
 -- 칼럼추가
 ALTER TABLE reservations ADD roomId varchar(50) NOT NULL
