@@ -13,6 +13,11 @@ DROP : 삭제
 
 ```
 
+### 그 외 구문
+```
+SELECT DB_NAME() AS ThisDB;
+```
+
 ### MariaDB
 0. 환경구축
 ```
