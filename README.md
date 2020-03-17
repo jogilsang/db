@@ -1,5 +1,7 @@
 # manual-db
 
+
+
 ### 샘플 db sample db
 https://archive.codeplex.com/?p=msftdbprodsamples
 
@@ -60,6 +62,10 @@ ALTER TABLE reservations ADD roomId varchar(50) NOT NULL
 DELETE FROM [table] WHERE id=5;
 Truncate [table]
 DELETE FROM reservations WHERE id = ? AND (token = ? OR token = ?)
+
+-- 칼럼 타입 변경
+ALTER TABLE reservations MODIFY token varchar(100);
+
 ```
 
 2. CLI 한글입력 
