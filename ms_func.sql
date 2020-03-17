@@ -51,22 +51,21 @@ select a.job_id, job_desc,
 	ROW_NUMBER() over(order by a.job_id) AS ROW_NUM 
 	from pubs.dbo.jobs a
 
--- EQUI JOIN (ë“±ê°€ ì¡°ì¸) n x nê°œ
+-- EQUI JOIN (µî°¡ Á¶ÀÎ) n x n°³
 select a.SupplierID, a.Country, b.CustomerID from [Northwind].[dbo].[Suppliers] a, [Northwind].[dbo].[Customers] b
 where a.Country = b.Country ORDER BY a.Country
 
--- INNER JOIN ( = ë“±ê°€ ì¡°ì¸) 
+-- INNER JOIN ( = µî°¡ Á¶ÀÎ) 
 select a.SupplierID, a.Country, b.CustomerID 
 from [Northwind].[dbo].[Suppliers] a INNER JOIN [Northwind].[dbo].[Customers] b
 ON a.Country = b.Country ORDER BY a.Country
 
--- INTERSECT ì—°ì‚° ( êµì§‘í•© )
+-- INTERSECT ¿¬»ê ( ±³ÁýÇÕ )
 select a.City, a.Country FROM [Northwind].[dbo].[Suppliers] a
 INTERSECT
 select b.Country, b.City FROM [Northwind].[dbo].[Customers] b
 
 -- Outer JOIN
--- WHERE b.Country = NULLì€ êµì§‘í•©ì„ ì œì™¸ì‹œí‚¨ë‹¤.	   
 select a.SupplierID, a.Country, b.CustomerID  
 from [Northwind].[dbo].[Suppliers] a LEFT OUTER JOIN [Northwind].[dbo].[Customers] b 
 ON a.Country = b.Country ORDER BY a.Country
@@ -78,3 +77,63 @@ ON a.Country = b.Country ORDER BY a.Country
 -- CROSS JOIN
 SELECT a.SupplierID, b.CustomerID 
 FROM [Northwind].[dbo].[Suppliers] a CROSS JOIN [Northwind].[dbo].[Customers] b
+
+-- UNION
+select a.au_id, a.title_id from pubs.dbo.titleauthor a
+union
+select b.au_id, b.title_id from pubs.dbo.titleauthor2 b
+
+-- UNION ALL
+select a.au_id, a.title_id from pubs.dbo.titleauthor a
+union all
+select b.au_id, b.title_id from pubs.dbo.titleauthor2 b
+
+-- Å×ÀÌºí º¹»çÇØ¼­ »õ·Î »ý¼º
+-- select * into [»õ·Î¿î Å×ÀÌºí ¸í] from [º¹»çÇÒ Å×ÀÌºí ¸í]
+select * into titleauthor2 from titleauthor
+
+-- IN (subquery) 
+-- before
+select * from pubs.dbo.jobs a
+where min_lvl = 75 
+
+-- after
+select * from pubs.dbo.jobs a
+where min_lvl = 75 and max_lvl IN ( select max_lvl from pubs.dbo.jobs b where max_lvl > 160)
+
+-- ALL (subquery) 
+select * from pubs.dbo.jobs a
+where a.min_lvl = 75 and a.max_lvl >= ALL( select max_lvl from pubs.dbo.jobs where max_lvl > 160)
+
+-- EXISTS
+select * from pubs.dbo.jobs a
+where a.min_lvl = 75 and exists ( select 1 from pubs.dbo.jobs where max_lvl > 150 )
+
+-- ½ºÄ®¶ó(Scala) Subquery
+select job_id AS Á÷¾÷,
+job_desc AS Á÷¾÷¼³¸í,
+min_lvl AS ÃÖ¼Ò¿¬ºÀ,
+max_lvl AS ÃÖ´ë¿¬ºÀ
+from pubs.dbo.jobs a
+where a.min_lvl = 75
+
+select job_id AS Á÷¾÷,
+job_desc AS Á÷¾÷¼³¸í,
+min_lvl AS ÃÖ¼Ò¿¬ºÀ,
+max_lvl AS ÃÖ´ë¿¬ºÀ,
+(SELECT max_lvl FROM pubs.dbo.jobs ) AS Æò±Õ±Þ¿©
+from pubs.dbo.jobs a
+where a.min_lvl = 75
+
+-- ¿¬°ü(Correlated) Subquery
+select Country AS ±¹°¡ 
+from [Northwind].[dbo].[Suppliers] a 
+WHERE a.Country = ( 
+	SELECT b.Country from [Northwind].[dbo].[Customers] b WHERE b.Country = a.Country)
+
+-- ROLLUP (GROUP BYÀÇ SUBTOTAL)
+select * from [Northwind].[dbo].[Suppliers] a group by a.SupplierID
+
+
+
+
