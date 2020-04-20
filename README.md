@@ -1,6 +1,8 @@
 # manual-db
 
-
+### mysql
+설치 :   
+https://dev.mysql.com/downloads/file/?id=492434   
 
 ### 샘플 db sample db
 https://archive.codeplex.com/?p=msftdbprodsamples
