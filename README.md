@@ -233,3 +233,5 @@ select * from person;
 insert into auth(name, email, pw) values('jo', 'jogilsang@naver.com', '1234');
 ```
 
+### MSSQL
+"![](/mssql_data.jpg)"
