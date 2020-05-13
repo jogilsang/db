@@ -1,5 +1,7 @@
 # manual-db
 
+http://www.dpriver.com/pp/sqlformat.htm
+
 ### mysql
 설치 :   
 https://dev.mysql.com/downloads/file/?id=492434   
