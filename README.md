@@ -19,6 +19,12 @@ DROP : 삭제
 
 ```
 
+### mysqql 
+```mysql
+-- 대소문자구분 확인 0 : 구분, 1 : 구분X
+show variables like 'lower_case_table_names';
+```
+
 ### 그 외 구문
 ```
 SELECT DB_NAME() AS ThisDB;
