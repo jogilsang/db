@@ -329,3 +329,6 @@ sp_spaceused tmpod
 
 
 set statistics io on
+
+--현재 실행했던 쿼리문보기
+SELECT db_name(st.dbid) DBName , object_schema_name(objectid, st.dbid) SchemaName , object_name(objectid, st.dbid) SPName , qs.total_elapsed_time , creation_time , last_execution_time , text FROM sys.dm_exec_query_stats qs CROSS APPLY sys.dm_exec_sql_text(qs.plan_handle)st JOIN sys.dm_exec_cached_plans cp ON qs.plan_handle = cp.plan_handle
