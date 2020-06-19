@@ -295,8 +295,6 @@ from INFORMATION_SCHEMA.VIEWS
 WHERE TABLE_SCHEMA ='dbo'
 and table_name not like 'sys%'
 
-ㅡ ㅡㅜㅏㅜㅡㅗㅛ6,
-
 select * from sysobjects where type ='u'
 
 --계산된 칼럼에 인덱스를 추가하면, 테이블 크기가 늘어나서 확인이가능
