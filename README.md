@@ -30,6 +30,23 @@ show variables like 'lower_case_table_names';
 SELECT DB_NAME() AS ThisDB;
 ```
 
+### MSSQL 
+```
+
+저장 프로시저
+SQL문이 두 개 이상이면 일괄처리
+
+WITH(NOLOCK)
+트랜잭션이 롤백이되어 잘못된 데이터를 읽더라도,
+난 트랜잭션 중인 데이터를 읽겠다.
+
+Batch Requests/sec 
+배치가 수행된 수
+값이 3이라면, 세 개의 SP가 동시에 실행
+
+
+```
+
 ### MariaDB
 0. 환경구축
 ```
