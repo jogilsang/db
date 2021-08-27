@@ -11,6 +11,8 @@
 - util
     - [doc](#doc)
     - [keymap](#keymap)
+- where
+    - [date](#date)
 
 ---
 
@@ -70,6 +72,12 @@ https://docs.microsoft.com/ko-kr/sql/t-sql/functions/year-transact-sql?view=sql-
 ### keymap
 ```
 alt + t(도구) +o(옵션) : 옵션 
+```
+
+## where
+### date
+```sql
+Convert(CHAR(8), InDate,112) between '20210101' and '20210131'
 ```
 
 
