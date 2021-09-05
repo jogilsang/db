@@ -9,7 +9,7 @@
     -[1. Amazon Linux 2 AMI](#1.%20Amazon%20Linux%202%20AMI)  
 - [Scheme](#Scheme)
 - [Tool](#Tool)
-
+  - [nosqlbooster](#nosqlbooster)
 ---
 
 ## install
@@ -83,6 +83,6 @@ mongoose.connect('mongodb://user:1q2w3e4r@ec2-18-188-194-28.us-east-2.compute.am
 - https://mongoosejs.com/docs/schematypes.html
 
 #### Tool
-- https://nosqlbooster.com/
+- [nosqlbooster](https://nosqlbooster.com/)
 
 
