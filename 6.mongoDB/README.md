@@ -24,6 +24,7 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/
    10  sudo systemctl status mongod
    11  sudo systemctl enable mongod
    12  mongosh
+   13  mongo --host 127.0.0.1:27017
 ```
 - log
 ```
