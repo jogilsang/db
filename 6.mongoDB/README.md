@@ -54,13 +54,9 @@ mongo --host 127.0.0.1:27017
 1. 접속해서 DB별로 계정생성
 mongo
 use admin;
-> db.createUser({user: "admin", pwd: "#%#@%#@$#@$#@$@#$", roles:["root"]});
-> exit;
+db.createUser({user: "admin", pwd: "$#@^%#@$%", roles:["root"]});
 use 생성하려는DB명;
-> db.createUser({ user: "user",
->   pwd: "#%#@%#@$#@$#@$@#$",
->   roles: ["dbAdmin", "readWrite"]
-> })
+db.createUser({ user: "user",pwd: "$%$#@%@#",roles: ["dbAdmin", "readWrite"]})
 
 2. localhost 외에서도 접속할 수 있도록 방화벽과 conf 파일수정
 // EC2 인바운드 정책도 수정
