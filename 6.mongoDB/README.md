@@ -1,15 +1,18 @@
 
 ## 6.mongoDB
 ## INDEX
-- [setting](#setting)
+- [install](#install)
   - [AWS-EC2](#AWS-EC2)   
+    -[1. Amazon Linux 2 AMI](#1.%20Amazon%20Linux%202%20AMI)  
+- [setting](#setting)
+    - [AWS-EC2](#AWS-EC2)   
     -[1. Amazon Linux 2 AMI](#1.%20Amazon%20Linux%202%20AMI)  
 - [Scheme](#Scheme)
 - [Tool](#Tool)
 
 ---
 
-## setting
+## install
 ### AWS-EC2
 #### 1. Amazon Linux 2 AMI
 - doc
@@ -42,6 +45,37 @@ mongo --host 127.0.0.1:27017
 - port
 ```
 27017
+```
+
+## setting
+### AWS-EC2
+#### 1. Amazon Linux 2 AMI
+```
+1.
+mongo
+use admin;
+> db.createUser({user: "admin", pwd: "#%#@%#@$#@$#@$@#$", roles:["root"]});
+> exit;
+use 생성하려는DB명;
+> db.createUser({ user: "user",
+>   pwd: "#%#@%#@$#@$#@$@#$",
+>   roles: ["dbAdmin", "readWrite"]
+> })
+
+2.
+// EC2 인바운드 정책도 수정
+sudo vi /etc/mongod.conf
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+security:
+  authorization: 'enabled'
+
+3. 
+sudo systemctl restart mongod
+
+4. 
+mongo -u 생성한ID -p 생성한PW public_ip:27017/생성했던DB명
 ```
 
 #### Scheme
