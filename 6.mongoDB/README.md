@@ -8,5 +8,9 @@
 
 ## setting
 ### AWS-EC2
+#### 1. Amazon Linux 2 AMI
+```
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/
+```
 
 
