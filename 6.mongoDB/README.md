@@ -16,15 +16,22 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/
 ```
 - cli
 ```
-    3  grep ^NAME  /etc/*release
-    4  sudo vi /etc/yum.repos.d/mongodb-org-5.0.repo
-    5  sudo yum install -y mongodb-org
-    6  ps --no-headers -o comm 1
-    9  sudo systemctl start mongod
-   10  sudo systemctl status mongod
-   11  sudo systemctl enable mongod
-   12  mongosh
-   13  mongo --host 127.0.0.1:27017
+grep ^NAME  /etc/*release
+sudo vi /etc/yum.repos.d/mongodb-org-5.0.repo
+[mongodb-org-5.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/amazon/2/mongodb-org/5.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+
+sudo yum install -y mongodb-org
+ps --no-headers -o comm 1
+sudo systemctl start mongod
+sudo systemctl status mongod
+sudo systemctl enable mongod
+mongosh
+mongo --host 127.0.0.1:27017
 ```
 - log
 ```
