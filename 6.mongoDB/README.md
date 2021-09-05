@@ -29,5 +29,10 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/
 ```
 /var/log/mongodb/mongod.log
 ```
+- port
+```
+27017
+```
+
 
 
