@@ -50,8 +50,8 @@ mongo --host 127.0.0.1:27017
 ## setting
 ### AWS-EC2
 #### 1. Amazon Linux 2 AMI
-```
-1.
+```javascript
+1. 접속해서 DB별로 계정생성
 mongo
 use admin;
 > db.createUser({user: "admin", pwd: "#%#@%#@$#@$#@$@#$", roles:["root"]});
@@ -62,7 +62,7 @@ use 생성하려는DB명;
 >   roles: ["dbAdmin", "readWrite"]
 > })
 
-2.
+2. localhost 외에서도 접속할 수 있도록 방화벽과 conf 파일수정
 // EC2 인바운드 정책도 수정
 sudo vi /etc/mongod.conf
 net:
@@ -71,11 +71,12 @@ net:
 security:
   authorization: 'enabled'
 
-3. 
+3. 설정적용 후 재시작
 sudo systemctl restart mongod
 
-4. 
+4. 내외부에서 해당DB에 생성한 해당계정으로 접속여부 확인
 mongo -u 생성한ID -p 생성한PW public_ip:27017/생성했던DB명
+mongoose.connect('mongodb://user:1q2w3e4r@ec2-18-188-194-28.us-east-2.compute.amazonaws.com:27017/websurveyDB');
 ```
 
 #### Scheme
