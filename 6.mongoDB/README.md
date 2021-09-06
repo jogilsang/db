@@ -10,6 +10,7 @@
 - [Scheme](#Scheme)
 - [Tool](#Tool)
   - [nosqlbooster](#nosqlbooster)
+- [query](#query)
 ---
 
 ## install
@@ -81,4 +82,16 @@ mongoose.connect('mongodb://user:1q2w3e4r@ec2-18-188-194-28.us-east-2.compute.am
 #### Tool
 - [nosqlbooster](https://nosqlbooster.com/)
 
+#### query
+##### SELECT
+```sql
+db.pw.find()
+```
+##### INSERT
+```sql
+use surveyDB
+m = { name : "pw", pw : "1234"}
+db.pw.insert(m)
+db.pw.update( { name: "pw" }, { $set: {pw: "tttt"} } )
+```
 
