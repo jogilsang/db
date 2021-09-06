@@ -86,6 +86,7 @@ mongoose.connect('mongodb://user:1q2w3e4r@ec2-18-188-194-28.us-east-2.compute.am
 ##### SELECT
 ```sql
 db.pw.find()
+db.pw.find().pretty()
 ```
 ##### INSERT
 ```sql
