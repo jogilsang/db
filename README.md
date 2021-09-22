@@ -1,6 +1,6 @@
 # manual-db
 
-## Posting
+## My Posting
 - MSSQL
     - setting
         - [AWS RDS 자습서 - MSSQL 설치해보기](https://blog.naver.com/jogilsang/221395181062)
@@ -15,6 +15,12 @@
         - [MSSQL - 저장 프로시저(stored procedure, SP)](https://blog.naver.com/jogilsang/221857532307)
     - util
         - [MSSQL - SSMS 테마 어둡게 사용하기, Dark Theme](https://blog.naver.com/jogilsang/221873071604)
+
+## dbeaver
+```
+ctrl + enter : 쿼리 한줄실행
+alx + x : 쿼리 여러줄 실행 (스크립트 실행)
+```
 
 ## TroubleShooting
 - [MSSQL - 서버 USER에서 서비스 SQLSERVERAGENT을(를) 시작할 수 없습니다. (mscorlib)](https://blog.naver.com/jogilsang/221993309350)
