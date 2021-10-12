@@ -1,6 +1,7 @@
 # manual-db
 
 ## My Posting
+- Oracle
 - MSSQL
     - setting
         - [AWS RDS 자습서 - MSSQL 설치해보기](https://blog.naver.com/jogilsang/221395181062)
@@ -24,13 +25,5 @@ alx + x : 쿼리 여러줄 실행 (스크립트 실행)
 
 ## TroubleShooting
 - [MSSQL - 서버 USER에서 서비스 SQLSERVERAGENT을(를) 시작할 수 없습니다. (mscorlib)](https://blog.naver.com/jogilsang/221993309350)
-
-### Feature
-1. 포스트 요청을 처리할수있는가 (POST)
-3. 데이터를 넣을수있는가 (INSERT)
-4. 데이터를 수정할수있는가 (UPDATE)
-5. 데이터를 삭제할수있는가 (DELETE)
-6. 데이터를 가져올수잇는가 (QUERY)
-7. 테이블을 생성할수있는가 (TABLE)
 
 
