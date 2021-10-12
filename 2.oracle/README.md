@@ -11,12 +11,38 @@
 ### [Login](#Login)
 #### - [sys](#sys)
 #### - [user](#user)
+
 ### [Query](#query)
 ####  - [쿼리내역조회 - History](#History)
-####  - [출력개수 - rownum](#History)
+####  - [출력개수 - rownum](#rownum)
 ####  - [칼럼명으로 테이블 찾기 - findTableAboutColumn](#findTableAboutColumn)
+####  - [equi join](#equi%20join)
+####  - [non equi join](non%20equi%20join)
+####  - [outer join](outer%20join)
+####  - [self join]
+####  - [on절]
+####  - [using절]
+####  - [natural join]
+####  - [left/right join]
+####  - [full outer join]
+####  - [union all]
+####  - [union]
+####  - [intersect]
+####  - [minus]
+####  - [SUBQUERY]
+####  - [NOT IN]
+####  - [EXISTS와 NOT EXISTS]
+####  - [HAVING절의 SUBQUERY]
+####  - [FROM절의 SUBQUERY]
+####  - [SELECT절의 SUBQUERY]
+####  - [INSERT]
+####  - [CREATE TEMPORARY TABLE]
+####  - [VIEW]
+####  - [WITH ~AS
+
 ### [System](#System)
 ####  - [날짜형식 - DateFormat](#DateFormat)
+
 #### [IDE](#IDE)
 ####  - [SQL Developer 색상바꾸기](#SQL%20Developer%20색상바꾸기)
 ### [dummy](#dummy)
@@ -68,12 +94,22 @@ ORDER BY
 
 ### rownum
 ```sql
--- 출력개수
---mssql
-select TOP 10
-
 --oracle
+-- 출력개수
 select ... where rownum <= n;
+
+-- top n-query
+-- 1. 4개 행으로 제한해서 출력
+FETCH 4 ROWS ONLY;
+
+-- 2. 4개 출력하는대, 출력되는 값과 겹치는게 있다면 추가로 같이출력
+FETCH 4 ROWS WITH TIES;
+
+-- 3. 상위 20%의 행을 가져온다
+FETCH FIRST 20 PERCENT ROWS ONLY;
+
+-- 4. 출력이 시작되는 위치 지정가능
+OFFSET 9 ROWS;
 ```
 
 #### findTableAboutColumn
@@ -83,6 +119,39 @@ select ... where rownum <= n;
 select TABLE_NAME AS "테이블 명", COLUMN_NAME AS "칼럼 명"
 from ALL_TAB_COLUMNS
 where COLUMN_NAME='칼럼명';
+```
+
+#### equi join
+```sql
+select ename, loc
+from emp, dept
+where emp.deptno = dept.deptno ;
+
+select e.ename, d.loc, e.job
+from emp e, dept d
+where e.deptno = d.deptno and e.job = 'ANLYST';
+```
+
+#### non equi join
+```sql
+select e.name, e.sal, s.grade
+from emp e, salgrade s
+where e.sal between s.losal and s.hisal;
+```
+
+#### outer join
+```sql
+-- 사원 테이블과 부서 테이블을 조인했을 때, 결과가 덜 나오는 쪽에 (+)를 붙여줍니다.
+-- RIGHT OUTER JOIN
+-- 
+select e.ename, d.loc
+from emp e, dept d
+where e.deptno (+) = d.deptno;
+
+-- LEFT OUTER JOIN
+select e.ename, d.loc
+from emp e, dept d
+where e.deptno = (+) d.deptno;
 ```
 
 ---
