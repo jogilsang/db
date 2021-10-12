@@ -11,11 +11,12 @@
 ### [Login](#Login)
 #### - [sys](#sys)
 #### - [user](#user)
-### [Nomal](#Nomal)
+### [Query](#query)
 ####  - [쿼리내역조회 - History](#History)
+####  - [출력개수 - rownum](#History)
+####  - [칼럼명으로 테이블 찾기 - findTableAboutColumn](#findTableAboutColumn)
 ### [System](#System)
 ####  - [날짜형식 - DateFormat](#DateFormat)
-####  - [칼럼명으로 테이블 찾기 - findTableAboutColumn](#findTableAboutColumn)
 #### [IDE](#IDE)
 ####  - [SQL Developer 색상바꾸기](#SQL%20Developer%20색상바꾸기)
 ### [dummy](#dummy)
@@ -46,7 +47,7 @@ lsnrctl start
 5. show user
 ```
 
-### Nomal
+### query
 #### - History
 ```sql
 --oracle
@@ -65,13 +66,23 @@ ORDER BY
   last_active_time DESC;
 ```
 
-### - 출력개수
+### rownum
 ```sql
+-- 출력개수
 --mssql
 select TOP 10
 
 --oracle
 select ... where rownum <= n;
+```
+
+#### findTableAboutColumn
+```sql
+-- oracle
+-- 칼럼찾기
+select TABLE_NAME AS "테이블 명", COLUMN_NAME AS "칼럼 명"
+from ALL_TAB_COLUMNS
+where COLUMN_NAME='칼럼명';
 ```
 
 ---
@@ -84,14 +95,7 @@ select ... where rownum <= n;
 SELECT * FROM NLS_SESSION_PARAMETERS 
 WHERE PARAMETER = 'NLS_DATE_FORMAT'
 ```
-#### findTableAboutColumn
-```sql
--- oracle
--- 칼럼찾기
-select TABLE_NAME AS "테이블 명", COLUMN_NAME AS "칼럼 명"
-from ALL_TAB_COLUMNS
-where COLUMN_NAME='칼럼명';
-```
+
 
 ### SQL Developer 색상바꾸기
 1. `Path : C:\Users\cho_gilsang\AppData\Roaming\SQL Developer\system20.2.0.175.1842\o.ide.12.2.1.5.42.200515.1304\dtcache.xml`
