@@ -18,9 +18,21 @@
         - [MSSQL - SSMS 테마 어둡게 사용하기, Dark Theme](https://blog.naver.com/jogilsang/221873071604)
 
 ## dbeaver
+> preference - General - key
 ```
 ctrl + enter : 쿼리 한줄실행
 alx + x : 쿼리 여러줄 실행 (스크립트 실행)
+
+ctrl + shift + e : 실행계획 보기
+ctrl + altr + shift + c : count 표기
+
+ctrl + shift + x : 대문자
+ctrl + shift + y : 소문자
+
+ctrl + shift + c : 칼럼포함 복사
+ctrl + shift + v : 칼럼포함 복붙
+
+F3  : 신규 편집창 열기
 ```
 
 ## TroubleShooting
