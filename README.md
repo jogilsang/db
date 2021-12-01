@@ -34,6 +34,8 @@ ctrl + shift + c : 칼럼포함 복사
 ctrl + shift + v : 칼럼포함 복붙
 
 F3  : 신규 편집창 열기
+
+CTRL+2 : Toggle sorting by current column
 ```
 
 ## TroubleShooting
