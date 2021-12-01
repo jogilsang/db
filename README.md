@@ -18,6 +18,7 @@
         - [MSSQL - SSMS 테마 어둡게 사용하기, Dark Theme](https://blog.naver.com/jogilsang/221873071604)
 
 ## dbeaver
+> [DBeaver Shortcut](https://dbeaver.com/docs/wiki/Shortcuts/)
 > preference - General - key
 ```
 ctrl + enter : 쿼리 한줄실행
