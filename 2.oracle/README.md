@@ -51,6 +51,15 @@ lsnrctl start
 2.1 [시스템 속성] - [환경 변수] - [시스템 변수 새로만들기] 
 2.2 변수이름 : NLS_LANG
 2.3 값 : AMERICAN_AMERICA.KO16KSC5601
+
+3.1.sqlplus 실행
+3.2.
+update sys.props$ set value$='UTF8' where name='NLS_CHARACTERSET';
+update sys.props$ set value$='UTF8' where name='NLS_NCHAR_CHARACTERSET';
+update sys.props$ set value$='KOREAN_KOREA.UTF8' where name='NLS_LANGUAGE';
+shutdown immediate;
+startup;
+
 ```
 
 
