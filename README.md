@@ -12,6 +12,9 @@
 - 상단 '윈도우' 메뉴 > 설정 > encoding 검색 > UTF-8 을 선택 후 적용완료
 - 상단 '윈도우' 메뉴 > 설정 > autosave 검색 > Enable autosave for dirty editors
 - 수동커밋 자동커밋 해제 - 데이터베이스 - 트랜잭션 모드 - Manual Commit (Read committed) 
+- 상단 '윈도우' 메뉴 > 설정 > 편집기 > SQL 편집기 > SQL 실행
+Blank line is statement delimiter 체크 해제 (줄바꿈을 다른 쿼리로 인식한다 체크해제)
+- 상단 '윈도우' 메뉴 > 설정 > 편집기 > 데이터 편집기 > ResultSet fetch size (출력결과 200개에서 늘리거나 없애기)
 
 > [DBeaver Shortcut](https://dbeaver.com/docs/wiki/Shortcuts/)
 > preference - General - key
@@ -33,6 +36,8 @@ ctrl + shift + c : 칼럼포함 복사
 ctrl + shift + v : 칼럼포함 복붙
 
 F3  : 신규 편집창 열기
+ctrl + 9 : database 선택
+ctrl + 0 : scheme 선택
 
 CTRL+2 : Toggle sorting by current column
 ```

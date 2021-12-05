@@ -8,6 +8,7 @@
 
 ## INDEX
 ### [프로그램 실행(exec)](#exec)
+### [한글패치](#한글패치)
 ### [Login](#Login)
 #### - [sys](#sys)
 #### - [user](#user)
@@ -40,6 +41,19 @@
 net start OracleServiceORCL
 lsnrctl start
 ```
+
+### 한글패치
+```
+1.1 regedit 실행
+1.2 컴퓨터\HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_OraDB19Home1
+1.3 AMERICAN_AMERICA.KO16KSC5601 
+
+2.1 [시스템 속성] - [환경 변수] - [시스템 변수 새로만들기] 
+2.2 변수이름 : NLS_LANG
+2.3 값 : AMERICAN_AMERICA.KO16KSC5601
+```
+
+
 ### Login
 #### sys (초기로그인 또는 아이디, 패스워드 까먹은경우)
 ```
