@@ -1,26 +1,25 @@
 # manual-db
 
-## My Posting
-- Oracle
-- MSSQL
-    - setting
-        - [AWS RDS 자습서 - MSSQL 설치해보기](https://blog.naver.com/jogilsang/221395181062)
-        - [MSSQL - Sample DB사용, bak 파일형식의 DB복원하기](https://blog.naver.com/jogilsang/221855270476)
-        - [MSSQL - 사용자 정의 테이블 형식, 타입](https://blog.naver.com/jogilsang/221861178626)
-    - syntax
-        - [MSSQL - SELECT](https://blog.naver.com/jogilsang/221823007090)
-        - [MSSQL - UPDATE, COMMIT, ROLLBACK, SAVE](https://blog.naver.com/jogilsang/221832202579)
-        - [MSSQL - CASE, IF, ELSE, WITH](https://blog.naver.com/jogilsang/221826719183)
-        - [MSSQL - JOIN, SUBQUERY](https://blog.naver.com/jogilsang/221839429376)
-        - [MSSQL - Function](https://blog.naver.com/jogilsang/221826663647)
-        - [MSSQL - 저장 프로시저(stored procedure, SP)](https://blog.naver.com/jogilsang/221857532307)
-    - util
-        - [MSSQL - SSMS 테마 어둡게 사용하기, Dark Theme](https://blog.naver.com/jogilsang/221873071604)
-
 ## dbeaver
+> [DBeaver 세팅]
+- 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 'SQL 포맷' > Keyword case를 Default에서 Upper로 변경
+- 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 '글꼴' > '기본' - '텍스트 글꼴' 선택 후 편집에서 글꼴 및 사이즈 변경
+- 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 '문서 편집기' > '행 번호 표시' 체크
+- 윈도우 > 설정 > 연결 > 연결 유형 에 들어가보면 기본적으로 Development/Test/Production 세 가지설정이 되어있는 것을 볼 수 있다.
+- Edit Connection - General - Connection Type 설정 - (운영/QA/개발 분리)
+- 윈도우 > 설정 > User Interface > 모양 > 테마(T) > 원하는 테마를 선택 (EX : Dark)
+- 상단 '윈도우' 메뉴 > 설정 > Convert 검색 -> convert keyword case (Auto Format)
+- 상단 '윈도우' 메뉴 > 설정 > encoding 검색 > UTF-8 을 선택 후 적용완료
+- 상단 '윈도우' 메뉴 > 설정 > autosave 검색 > Enable autosave for dirty editors
+- 수동커밋 자동커밋 해제 - 데이터베이스 - 트랜잭션 모드 - Manual Commit (Read committed) 
+
 > [DBeaver Shortcut](https://dbeaver.com/docs/wiki/Shortcuts/)
 > preference - General - key
 ```
+ctrl + shift + F : beautify 기능
+alt + 위아래 :
+ctrl + shift + 위아래 :
+
 ctrl + enter : 쿼리 한줄실행
 alx + x : 쿼리 여러줄 실행 (스크립트 실행)
 
