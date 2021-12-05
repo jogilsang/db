@@ -12,6 +12,8 @@
 #### - [sys](#sys)
 #### - [user](#user)
 
+### [PL/SQL](#pl\/sql)
+
 ### [Query](#query)
 ####  - [쿼리내역조회 - History](#History)
 ####  - [출력개수 - rownum](#rownum)
@@ -19,27 +21,6 @@
 ####  - [equi join](#equi%20join)
 ####  - [non equi join](non%20equi%20join)
 ####  - [outer join](outer%20join)
-####  - [self join]
-####  - [on절]
-####  - [using절]
-####  - [natural join]
-####  - [left/right join]
-####  - [full outer join]
-####  - [union all]
-####  - [union]
-####  - [intersect]
-####  - [minus]
-####  - [SUBQUERY]
-####  - [NOT IN]
-####  - [EXISTS와 NOT EXISTS]
-####  - [HAVING절의 SUBQUERY]
-####  - [FROM절의 SUBQUERY]
-####  - [SELECT절의 SUBQUERY]
-####  - [INSERT]
-####  - [CREATE TEMPORARY TABLE]
-####  - [VIEW]
-####  - [WITH ~AS
-
 #### - [COMMIT 후 ROLLBACK](#commit%20후%20rollback)
 
 ### [System](#System)
@@ -74,6 +55,8 @@ lsnrctl start
 4. connect scott/tiger
 5. show user
 ```
+
+### pl/sql
 
 ### query
 #### - History
