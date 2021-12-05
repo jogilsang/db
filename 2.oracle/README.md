@@ -15,6 +15,8 @@
 ### [METHOD](#method)
 - ### [UPPDER,LOWER,INITCAP](uppder,lower,initcap)
 
+### [PL/SQL](#pl\/sql)
+
 ### [Query](#query)
 ####  - [쿼리내역조회 - History](#History)
 ####  - [출력개수 - rownum](#rownum)
@@ -22,26 +24,7 @@
 ####  - [equi join](#equi%20join)
 ####  - [non equi join](non%20equi%20join)
 ####  - [outer join](outer%20join)
-####  - [self join]
-####  - [on절]
-####  - [using절]
-####  - [natural join]
-####  - [left/right join]
-####  - [full outer join]
-####  - [union all]
-####  - [union]
-####  - [intersect]
-####  - [minus]
-####  - [SUBQUERY]
-####  - [NOT IN]
-####  - [EXISTS와 NOT EXISTS]
-####  - [HAVING절의 SUBQUERY]
-####  - [FROM절의 SUBQUERY]
-####  - [SELECT절의 SUBQUERY]
-####  - [INSERT]
-####  - [CREATE TEMPORARY TABLE]
-####  - [VIEW]
-####  - [WITH ~AS
+#### - [COMMIT 후 ROLLBACK](#commit%20후%20rollback)
 
 ### [System](#System)
 ####  - [날짜형식 - DateFormat](#DateFormat)
@@ -75,6 +58,8 @@ lsnrctl start
 4. connect scott/tiger
 5. show user
 ```
+
+### pl/sql
 
 ### query
 #### - History
@@ -158,6 +143,22 @@ where e.deptno = (+) d.deptno;
 ```
 
 ---
+
+### commit 후 rollback
+```sql
+COMMIT 후 ROLLBACK 해야하는경우
+테이블 안의 모든 데이터를 삭제 후,
+새로 입력하는 방법
+
+SELECT *
+FROM 테이블명
+AS OF TIMESTAMP(SYSTIMESTAMP - INTERVAL '원하는시간' MINUTE);
+
+INSERT INTO 테이블명
+SELECT * FROM 테이블명 
+AS OF TIMESTAMP(SYSTIMESTAMP - INTERVAL '원하는시간' MINUTE);
+```
+
 
 ### System
 #### DateFormat
