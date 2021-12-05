@@ -12,6 +12,9 @@
 #### - [sys](#sys)
 #### - [user](#user)
 
+### [METHOD](#method)
+- ### [UPPDER,LOWER,INITCAP](uppder,lower,initcap)
+
 ### [Query](#query)
 ####  - [쿼리내역조회 - History](#History)
 ####  - [출력개수 - rownum](#rownum)
