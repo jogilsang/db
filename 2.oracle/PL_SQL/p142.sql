@@ -13,7 +13,7 @@ SET verify off
 accept p_ename prompt 'Please input your emp name :  ~ '
 
 DECLARE 
-	v_ename emp.ename%TYPE  := upper('&p_ename'); -- empÅ×ÀÌºíÀÇ enameÀÇ µ¥ÀÌÅÍ ¾ÆÀÔÀ¸·Î ¼³Á¤
+	v_ename emp.ename%TYPE  := upper('&p_ename'); -- empï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ enameï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	v_sal emp.sal%TYPE;
 BEGIN 
 	SELECT sal INTO v_sal

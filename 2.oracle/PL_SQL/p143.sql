@@ -1,7 +1,7 @@
 
 
 -- p143
--- Basic Loop 이해하기
+-- Basic Loop 
 DECLARE
 	v_count number(10) := 0 ;
 BEGIN
