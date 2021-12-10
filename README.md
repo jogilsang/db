@@ -20,6 +20,8 @@ Blank line is statement delimiter 체크 해제 (줄바꿈을 다른 쿼리로 �
 > [DBeaver Shortcut](https://dbeaver.com/docs/wiki/Shortcuts/)
 > preference - General - key
 ```
+alt + shift + a : 열 선택모드
+
 ctrl + shift + F : beautify, pretty format 기능
 alt + 위아래 :
 ctrl + shift + 위아래 :
@@ -41,6 +43,10 @@ ctrl + 9 : database 선택
 ctrl + 0 : scheme 선택
 
 CTRL+2 : Toggle sorting by current column
+
+; 기재하고 ALT + X : 다중쿼리 실행
+ctrl + shift + [ : 세로분할
+ctrl + shit + - : 가로분할
 ```
 
 ## TroubleShooting
