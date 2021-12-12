@@ -1,0 +1,4 @@
+
+-- p116.sql
+-- 1부터 10까지의 합
+SELECT SUM(LEVEL) FROM DUAL CONNECT BY LEVEL <= 100 ;
