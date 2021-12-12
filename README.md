@@ -49,6 +49,9 @@ CTRL+2 : Toggle sorting by current column
 ; 기재하고 ALT + X : 다중쿼리 실행
 ctrl + shift + [ : 세로분할
 ctrl + shit + - : 가로분할
+
+alt + up : 앞에쿼리
+alt + down : 
 ```
 
 ## Template
