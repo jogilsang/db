@@ -26,11 +26,13 @@ Blank line is statement delimiter 체크 해제 (줄바꿈을 다른 쿼리로 �
 alt + shift + a : 열 선택모드
 
 ctrl + shift + F : beautify, pretty format 기능
-alt + 위아래 :
-ctrl + shift + 위아래 :
+alt + up : 앞에쿼리 (공백기준)
+alt + down : 뒤에쿼리 (공백기준)
 
 ctrl + enter : 쿼리 한줄실행
 alx + x : 쿼리 여러줄 실행 (스크립트 실행)
+ctrl + shift + [ : 화면 세로분할 OF,OFF
+ctrl + shit + - : 화면 가로분할 OF,OFF
 
 ctrl + shift + e : 실행계획 보기
 ctrl + altr + shift + c : count 표기
@@ -41,18 +43,12 @@ ctrl + shift + y : 소문자
 ctrl + shift + c : 칼럼포함 복사
 ctrl + shift + v : 칼럼포함 복붙
 
+F4  : 테이블 구조보기
 F3  : 신규 편집창 열기
 ctrl + 9 : database 선택
 ctrl + 0 : scheme 선택
 
 CTRL+2 : Toggle sorting by current column
-
-; 기재하고 ALT + X : 다중쿼리 실행
-ctrl + shift + [ : 세로분할
-ctrl + shit + - : 가로분할
-
-alt + up : 앞에쿼리
-alt + down : 
 ```
 
 ## Template
