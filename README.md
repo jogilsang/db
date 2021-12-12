@@ -7,8 +7,8 @@
 - 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 'SQL 포맷' > Formatter - External formatter (자동정렬 양식변경)
 - 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 '글꼴' > '기본' - '텍스트 글꼴' 선택 후 편집에서 글꼴 및 사이즈 변경
 - 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 '문서 편집기' > '행 번호 표시' 체크
-- 윈도우 > 설정 > 연결 > 연결 유형 에 들어가보면 기본적으로 Development/Test/Production 세 가지설정이 되어있는 것을 볼 수 있다.
-- Edit Connection - General - Connection Type 설정 - (운영/QA/개발 분리)
+- Edit Connection - General - Connection Type 설정 > (운영/QA/개발 분리, Development/Test/Production 세 가지설정이 되어있는 것)
+- 윈도우 > 설정 > 연결 > 연결 유형 > Auto-commit by default 해제
 - 윈도우 > 설정 > User Interface > 모양 > 테마(T) > 원하는 테마를 선택 (EX : Dark)
 - 상단 '윈도우' 메뉴 > 설정 > Convert 검색 -> convert keyword case (Auto Format)
 - 상단 '윈도우' 메뉴 > 설정 > Convert 검색 -> Auto close (Single Quotes, Double Quotes, Brackets) 체크해제
