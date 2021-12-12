@@ -10,6 +10,7 @@
 - Edit Connection - General - Connection Type 설정 - (운영/QA/개발 분리)
 - 윈도우 > 설정 > User Interface > 모양 > 테마(T) > 원하는 테마를 선택 (EX : Dark)
 - 상단 '윈도우' 메뉴 > 설정 > Convert 검색 -> convert keyword case (Auto Format)
+- 상단 '윈도우' 메뉴 > 설정 > Convert 검색 -> Auto close (Single Quotes, Double Quotes, Brackets) 체크해제
 - 상단 '윈도우' 메뉴 > 설정 > encoding 검색 > UTF-8 을 선택 후 적용완료
 - 상단 '윈도우' 메뉴 > 설정 > autosave 검색 > Enable autosave for dirty editors
 - 수동커밋 자동커밋 해제 - 데이터베이스 - 트랜잭션 모드 - Manual Commit (Read committed) 
