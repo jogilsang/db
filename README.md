@@ -17,6 +17,7 @@
 - 상단 '윈도우' 메뉴 > 설정 > 편집기 > SQL 편집기 > SQL 실행
 Blank line is statement delimiter 체크 해제 (줄바꿈을 다른 쿼리로 인식한다 체크해제)
 - 상단 '윈도우' 메뉴 > 설정 > 편집기 > 데이터 편집기 > ResultSet fetch size (출력결과 200개에서 늘리거나 없애기)
+- 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 'SQL 자동완성' > Auto-insert proposal 체크해제 (힌트 끄기)
 
 > [DBeaver Shortcut](https://dbeaver.com/docs/wiki/Shortcuts/)
 > preference - General - key
