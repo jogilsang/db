@@ -3,7 +3,7 @@
 
 ### My Posting
 - [오라클Oracle - Window 10 설치 및 IDE 연결 및 접속, DBeaver](https://blog.naver.com/jogilsang/222513229876)
-
+- []
 ---
 
 ## INDEX
@@ -19,13 +19,14 @@
 ### [PL/SQL](#pl\/sql)
 
 ### [Query](#query)
-####  - [쿼리내역조회 - History](#History)
-####  - [출력개수 - rownum](#rownum)
-####  - [칼럼명으로 테이블 찾기 - findTableAboutColumn](#findTableAboutColumn)
-####  - [equi join](#equi%20join)
-####  - [non equi join](non%20equi%20join)
-####  - [outer join](outer%20join)
+#### - [쿼리내역조회 - History](#History)
+#### - [출력개수 - rownum](#rownum)
+#### - [칼럼명으로 테이블 찾기 - findTableAboutColumn](#findTableAboutColumn)
+#### - [equi join](#equi%20join)
+#### - [non equi join](non%20equi%20join)
+#### - [outer join](outer%20join)
 #### - [COMMIT 후 ROLLBACK](#commit%20후%20rollback)
+#### - [UNPIVOT](https://gent.tistory.com/382)
 
 ### [System](#System)
 ####  - [날짜형식 - DateFormat](#DateFormat)
