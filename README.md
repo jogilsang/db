@@ -5,7 +5,7 @@
 - Edit Connection - General - Connection Type 설정 > (운영/QA/개발 분리, Development/Test/Production 세 가지설정이 되어있는 것)
 - 상단 '데이터베이스' 메뉴 > 트랜잭션 모드 > Manual Commit (Read committed) (수동커밋 변경(자동커밋 해제))
 - 상단 '데이터베이스' 메뉴 > 트랜잭션 모드 > SmartCommit 체크
-- 상단 '데이터베이스' 메뉴 > 트랜잭션 모드 > Serializable 체크
+- 상단 '데이터베이스' 메뉴 > 트랜잭션 모드 > Serializable / Read Uncommited 둘중에 택 1
 
 - 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 '작업공간' - 텍스트파일 인코딩(UTF-8), 새 텍스트 파일 행 분리문자(Unix 설정)
 - 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 'SQL 포맷' > Keyword case를 Default에서 Upper로 변경
