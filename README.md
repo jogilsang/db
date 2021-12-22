@@ -4,6 +4,8 @@
 > [DBeaver 세팅]
 - Edit Connection - General - Connection Type 설정 > (운영/QA/개발 분리, Development/Test/Production 세 가지설정이 되어있는 것)
 - 상단 '데이터베이스' 메뉴 > 트랜잭션 모드 > Manual Commit (Read committed) (수동커밋 변경(자동커밋 해제))
+- 상단 '데이터베이스' 메뉴 > 트랜잭션 모드 > SmartCommit 체크
+- 상단 '데이터베이스' 메뉴 > 트랜잭션 모드 > Serializable 체크
 
 - 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 '작업공간' - 텍스트파일 인코딩(UTF-8), 새 텍스트 파일 행 분리문자(Unix 설정)
 - 상단 '윈도우' 메뉴 > 설정 > 필터 텍스트에 'SQL 포맷' > Keyword case를 Default에서 Upper로 변경
@@ -19,6 +21,7 @@
 - 상단 '윈도우' 메뉴 > 설정 > autosave 검색 > Enable autosave for dirty editors
 - 상단 '윈도우' 메뉴 > 설정 > 편집기 > SQL 편집기 > SQL 실행 Blank line is statement delimiter 체크 해제 (줄바꿈을 다른 쿼리로 인식한다 체크해제)
 - 상단 '윈도우' 메뉴 > 설정 > 편집기 > 데이터 편집기 > ResultSet fetch size (출력결과 200개에서 늘리거나 없애기)
+- 상단 '윈도우' 메뉴 > 설정 > 편집기 > SQL 편집기 > SQL 자동완성 > Insert table aliases (in FROM clause) 체크해제 (테이블 alias 자동생성제거)
 
 > [DBeaver Shortcut](https://dbeaver.com/docs/wiki/Shortcuts/)
 > preference - General - key
