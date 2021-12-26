@@ -3,39 +3,33 @@
 
 ### My Posting
 - [오라클Oracle - Window 10 설치 및 IDE 연결 및 접속, DBeaver](https://blog.naver.com/jogilsang/222513229876)
-- []
----
-
-## INDEX
-### [프로그램 실행(exec)](#exec)
-### [한글패치](#한글패치)
-### [Login](#Login)
-#### - [sys](#sys)
-#### - [user](#user)
-
-### [METHOD](#method)
-- ### [UPPDER,LOWER,INITCAP](uppder,lower,initcap)
-
-### [PL/SQL](#pl\/sql)
-
-### [Query](#query)
-#### - [쿼리내역조회 - History](#History)
-#### - [출력개수 - rownum](#rownum)
-#### - [칼럼명으로 테이블 찾기 - findTableAboutColumn](#findTableAboutColumn)
-#### - [equi join](#equi%20join)
-#### - [non equi join](non%20equi%20join)
-#### - [outer join](outer%20join)
-#### - [COMMIT 후 ROLLBACK](#commit%20후%20rollback)
-#### - [UNPIVOT](https://gent.tistory.com/382)
-
-### [System](#System)
-####  - [날짜형식 - DateFormat](#DateFormat)
-
-#### [IDE](#IDE)
-####  - [SQL Developer 색상바꾸기](#SQL%20Developer%20색상바꾸기)
-### [dummy](#dummy)
 
 ---
+
+### INDEX
+- [start & exec](#exec)
+- [lang-ko](#한글패치)
+- [Login](#Login)
+  - [sys](#sys)
+  - [user](#user)
+- [Query](#query)
+  - [쿼리내역조회 - History](#History)
+  - [중복ROW 출력하기 - having count](#having%20count)
+  - [출력개수 - rownum](#rownum)
+  - [칼럼명으로 테이블 찾기 - findTableAboutColumn](#findTableAboutColumn)
+  - [조인 - JOIN](#join)
+  - [COMMIT 후 ROLLBACK](#commit%20후%20rollback)
+  - [UNPIVOT](https://gent.tistory.com/382)
+
+- [System](#System)
+  - [날짜형식 - DateFormat](#DateFormat)
+
+- [ETC](#etc)
+  - [SQL Developer 색상바꾸기](#SQL%20Developer%20색상바꾸기)
+- [dummy](#dummy)
+
+---
+
 ### exec
 ```
 # window
@@ -82,9 +76,6 @@ startup;
 4. connect scott/tiger
 5. show user
 ```
-
-### pl/sql
-
 ### query
 #### - History
 ```sql
@@ -102,6 +93,17 @@ WHERE
   AND parsing_schema_name <> 'EXFSYS'
 ORDER BY 
   last_active_time DESC;
+```
+
+### having count
+```sql
+-- 중복된 이메일 출력하기
+-- 중복row를 출력하기
+-- leetcode
+SELECT EMAIL
+FROM PERSON
+GROUP BY EMAIL
+HAVING COUNT(EMAIL) > 1;
 ```
 
 ### rownum
@@ -193,8 +195,8 @@ SELECT * FROM NLS_SESSION_PARAMETERS
 WHERE PARAMETER = 'NLS_DATE_FORMAT'
 ```
 
-
-### SQL Developer 색상바꾸기
+### etc
+#### SQL Developer 색상바꾸기
 1. `Path : C:\Users\cho_gilsang\AppData\Roaming\SQL Developer\system20.2.0.175.1842\o.ide.12.2.1.5.42.200515.1304\dtcache.xml`
 ```xml
    <schemeMap>
