@@ -13,6 +13,7 @@
   - [sys](#sys)
   - [user](#user)
 - [Query](#query)
+  - [DATE형식 날짜 계산](#date)
   - [쿼리내역조회 - History](#History)
   - [중복ROW 출력하기 - having count](#having%20count)
   - [출력개수 - rownum](#rownum)
@@ -93,6 +94,14 @@ WHERE
   AND parsing_schema_name <> 'EXFSYS'
 ORDER BY 
   last_active_time DESC;
+```
+### date
+> date형식 시간계산하기
+```sql
+select sysdate - 1 M_DAY FROM DUAL
+select sysdate - (1/24) M_TIME FROM DUAL
+select sysdate - (1/1440) M_MINUTE FROM DUAL
+select sysdate - (1/86400) M_SECOND FROM DUAL
 ```
 
 ### having count
